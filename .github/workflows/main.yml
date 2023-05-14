@@ -23,4 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: your-docker-hub-username/your-docker-image-name:latest
+          tags: asjadah/devopsproj

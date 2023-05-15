@@ -1,0 +1,28 @@
+version: "3" 
+ services: 
+   frontend: 
+     image: asjadah/client 
+     hostname: fe 
+     networks:   
+       - appnet 
+  
+  
+   nodebackend:  
+     image: asjadah/server 
+     hostname: be 
+     networks:   
+       - appnet 
+  
+  
+   reverseproxy:  
+     image: asjadah/proxy 
+     ports:  
+       - "80:80" 
+     depends_on: 
+       - nodebackend 
+       - frontend 
+     networks:   
+       - appnet 
+  
+ networks: 
+   appnet:

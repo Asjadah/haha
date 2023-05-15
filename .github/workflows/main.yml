@@ -28,7 +28,7 @@ jobs:
           push: true
           tags: asjadah/client
 
-          - name: log in docker
+      - name: log in docker
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
